@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
-import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Check, CheckCircle2, ChevronDown, ChevronRight, Clipboard, ExternalLink, FileSearch, FileText, FolderOpen, Layers, LockKeyhole, Menu, PanelRightClose, Search, ShieldCheck, X } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Check, CheckCircle2, ChevronDown, ChevronRight, Clipboard, ExternalLink, FileSearch, FileText, FolderOpen, LockKeyhole, Menu, PanelRightClose, Search, ShieldCheck, X } from 'lucide-react';
 import { chapters, evidence } from './data';
 import type { ChapterId, Evidence } from './types';
 
@@ -128,7 +128,7 @@ export default function App() {
  return <>
  <div className="room-shell">
   <aside className={`room-sidebar ${mobileMenu?'mobile-open':''}`} aria-label="Case sections">
-   <div className="brand"><span className="brand-mark"><Layers size={20}/></span><span><strong>Case study</strong><small>Digital asset forensics</small></span><button className="menu-close" onClick={()=>setMobileMenu(false)} aria-label="Close navigation"><X size={18}/></button></div>
+   <div className="brand"><span className="brand-mark"><BookOpen size={23} strokeWidth={1.8}/></span><span><strong>Case study</strong><small>Digital asset forensics</small></span><button className="menu-close" onClick={()=>setMobileMenu(false)} aria-label="Close navigation"><X size={18}/></button></div>
    <div className="sidebar-head"><span>CASE MATERIAL</span><span>October 2026</span></div>
    <div className="searchbox"><Search size={15}/><input value={filter} onChange={e=>setFilter(e.target.value)} placeholder="Find a section" aria-label="Filter sections"/></div>
    <nav className="chapter-nav" aria-label="Chapters">{listed.map(ch=>{const n=chapters.indexOf(ch)+1;return <button key={ch.id} type="button" aria-current={ch.id===active?'step':undefined} className={`chapter-link ${ch.id===active?'selected':''}`} onClick={()=>navigate(ch.id)}><span className="number">{String(n).padStart(2,'0')}</span><span className="chapter-name"><strong>{ch.title}</strong><small>{ch.subtitle}</small></span>{passed.includes(ch.id)?<CheckCircle2 size={16} className="done"/>:<ChevronRight size={16} className="chevron"/>}</button>})}</nav>
