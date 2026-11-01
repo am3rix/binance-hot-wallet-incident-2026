@@ -1,24 +1,49 @@
-name: Publish case-study site
+name: Build and publish research room
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  group: "github-pages"
   cancel-in-progress: true
 jobs:
-  deploy:
+  build:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install locked application dependencies
+        run: npm install --no-audit --no-fund
+        working-directory: web
+      - name: Type-check and build
+        run: npm run build
+        working-directory: web
+        env:
+          VITE_ANALYTICS_ENDPOINT: ${{ vars.ANALYTICS_API_URL }}
+      - name: Preserve verification, public research pages and sources
+        run: |
+          cp googlee55d1e1f92108071.html web/dist/
+          cp sitemap.xml web/dist/
+          cp favicon.svg web/dist/
+          cp -r research web/dist/research
+          cp -r assets web/dist/assets
+          cp -r data web/dist/data
+          cp -r site web/dist/site
+          cp -r docs web/dist/docs
+          printf '' > web/dist/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
-      - id: deployment
+          path: web/dist
+      - name: Publish
+        id: deploy
         uses: actions/deploy-pages@v4

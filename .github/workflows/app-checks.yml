@@ -1,0 +1,28 @@
+name: Frontend checks
+on:
+  push:
+    paths:
+      - 'web/**'
+      - '.github/workflows/app-checks.yml'
+  pull_request:
+    paths:
+      - 'web/**'
+      - '.github/workflows/app-checks.yml'
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+        working-directory: web
+      - run: npm run build
+        working-directory: web
+      - name: Assert public site generated
+        run: |
+          test -s web/dist/index.html
+          ! grep -R -E '(API_SECRET|ADMIN_TOKEN|PRIVATE_KEY)' web/dist/assets/ || exit 1
