@@ -56,45 +56,37 @@ Full addresses, timestamps and cited observations are in [`data/evidence.json`](
 
 **This is not evidence that EIP-7702 itself was broken.** An EIP-compliant authorization can be extremely dangerous when a high-value account's signing or approval boundary is compromised.
 
-## Independent replication
+## Reproduce selected Ethereum evidence (optional)
 
-The verifier performs **read-only** JSON-RPC calls. No transaction sending, signature creation, account interaction or contract deployment is implemented.
+Transactions can be inspected using the links above without downloading anything. To execute the **read-only** Python verifier:
 
 ```bash
-python -m venv .venv
-# Activate the virtual environment for your operating system.
 python -m pip install -e .
 python -m unittest discover -s tests -v
 python -m hotwallet_forensics.cli facts
-
-# Provide your own trusted Ethereum mainnet endpoint:
 export ETH_RPC_URL="https://YOUR_ETHEREUM_MAINNET_RPC"
-mkdir -p reports
-python -m hotwallet_forensics.cli verify --output reports/ethereum.json --graph-output reports/transfers.dot
-
-# Optional: recover EIP-7702 signers from public signatures (no private keys).
-python -m pip install -e '.[crypto]'
-python -m hotwallet_forensics.cli verify --recover-signers
+python -m hotwallet_forensics.cli verify
 ```
 
-Windows PowerShell: `$env:ETH_RPC_URL="https://YOUR_ETHEREUM_MAINNET_RPC"`. Create a `reports` directory before specifying a file inside it. Historical `eth_getCode` may require an archive-enabled provider. See [reproduction guide](docs/04-reproduction.md).
+PowerShell: `$env:ETH_RPC_URL="https://YOUR_ETHEREUM_MAINNET_RPC"`.
+
+The current verifier reads the transaction and receipt fields; it does **not** recover signatures, trace all token transfers or independently value losses across networks. See the [reproduction guide](docs/04-reproduction.md).
 
 ## Repository map
 
 ```text
-assets/                     Original editable SVG visuals
-site/index.html             Standalone responsive case-study presentation
-src/hotwallet_forensics/    Read-only RPC and evidence inspection
-  analysis.py               EIP-7702 and ERC-20 log parsers
-  crypto.py                 Optional public-signature recovery
-  rpc.py                    Allowlisted Ethereum JSON-RPC client
-  cli.py                    Reproduction entry point
-  graph.py                  Graphviz flow export from receipt events
-data/evidence.json          On-chain anchors and attributed observations
-data/sources.json           Canonical references (no tracking parameters)
-docs/                       Complete investigative write-up and methodology
-tests/                      Offline automated checks
-.github/workflows/          GitHub Actions for offline tests
+README.md             Case overview, evidence links and reader index
+docs/00-start-here.md Guided beginner walkthrough
+docs/01-incident-report.md  Chronology and reported incident scenario
+docs/02-evidence-ledger.md  Transaction evidence and confidence boundaries
+docs/03-eip7702-contract-analysis.md Protocol explanation
+docs/04-reproduction.md Optional code verification
+docs/05-sources-and-limitations.md Canonical citations and caveats
+data/                 Evidence and source records
+assets/               Original SVG figures
+site/                 Interactive dark forensic website
+src/                  Read-only Ethereum RPC verifier
+tests/                Offline unit tests
 ```
 
 ## Findings by evidence class
@@ -123,7 +115,7 @@ Read [the evidence standards and unresolved questions](docs/05-sources-and-limit
 
 ## Research integrity
 
-No internal Binance telemetry, seized devices, proprietary blockchain intelligence or privileged attribution feeds were used. Historical wallet addresses are included solely as public transaction identifiers. A source-backed statement is not automatically an independently reproduced finding; those categories remain separate throughout the repository.
+No internal Binance telemetry, seized devices, proprietary blockchain intelligence or privileged attribution feeds were used. No live RPC verification has yet been executed in this publication. Historical wallet addresses are included solely as public transaction identifiers. A source-backed statement is not automatically an independently reproduced finding; those categories remain separate throughout the repository.
 
 Data and analysis are fixed to **31 October 2026 UTC**. Later discoveries should appear as dated revisions, not silent retroactive edits. Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for correction standards.
 
