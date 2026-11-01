@@ -98,14 +98,31 @@ export default function App() {
  function choose(value:number) {setAnswer(prev=>({...prev,[active]:value}));setShowExplanation(true);if(chapter.question && value===chapter.question.correct&&!passed.includes(active)){setPassed(prev=>{const next=[...prev,active];try{localStorage.setItem(progressKey,JSON.stringify(next));}catch{/* storage unavailable */}return next;});}}
  function setTracking(value: Consent) {
   setConsent(value);
-  if(value){try{localStorage.setItem(consentKey,value);}catch{/* ignore */}}
-  if(value==='yes' && ENDPOINT){
-    const marker='forensic-event-sent';
-    let already=false;
-    try{already=sessionStorage.getItem(marker)==='yes';}catch{/* unavailable */}
-    if(!already){const visitId=crypto.randomUUID();fetch(ENDPOINT.replace(/\/$/,'')+'/v1/visit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({consent:true,visitId,event:'case_opened'}),mode:'cors',credentials:'omit',keepalive:false}).then(r=>{if(r.ok)try{sessionStorage.setItem(marker,'yes');}catch{/* unavailable */}}).catch(()=>{});}
-  }
+  if(value){try{localStorage.setItem(consentKey,value);}catch{/* preference storage unavailable */}}
  }
+ useEffect(()=>{
+  if(consent!=='yes' || !ENDPOINT)return;
+  const sentKey='forensic-event-sent';
+  const sessionKey='forensic-session-id';
+  let visitId: string;
+  try {
+   if(sessionStorage.getItem(sentKey))return;
+   visitId=sessionStorage.getItem(sessionKey)||crypto.randomUUID();
+   sessionStorage.setItem(sessionKey,visitId);
+   sessionStorage.setItem(sentKey,'pending');
+  }catch{return;} // No stable deduplication; skip optional analytics.
+  fetch(ENDPOINT.replace(/\/$/,'')+'/v1/visit',{
+   method:'POST',
+   headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({consent:true,visitId,event:'case_opened'}),
+   mode:'cors',credentials:'omit'
+  }).then(response=>{
+   if(!response.ok)throw Error('Request refused');
+   sessionStorage.setItem(sentKey,'sent');
+  }).catch(()=>{
+   try{if(sessionStorage.getItem(sentKey)==='pending')sessionStorage.removeItem(sentKey);}catch{/* unavailable */}
+  });
+ },[consent]);
  useEffect(()=>{function onHash(){const id=location.hash.replace('#room/',''); if(chapters.some(c=>c.id===id))setActive(id as ChapterId);}window.addEventListener('hashchange',onHash);return()=>window.removeEventListener('hashchange',onHash);},[]);
  useEffect(()=>{function onKey(e:KeyboardEvent){if(e.altKey||e.ctrlKey||e.metaKey||(e.target instanceof HTMLElement && ['INPUT','TEXTAREA','BUTTON'].includes(e.target.tagName)))return;if(e.key==='ArrowRight'&&ix<chapters.length-1)navigate(chapters[ix+1].id);if(e.key==='ArrowLeft'&&ix>0)navigate(chapters[ix-1].id);}window.addEventListener('keydown',onKey);return()=>window.removeEventListener('keydown',onKey);},[ix]);
  return <>
