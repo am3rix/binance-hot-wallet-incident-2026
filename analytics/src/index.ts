@@ -56,7 +56,14 @@ app.get('/v1/summary',async c=>{
  let difference=0;for(let i=0;i<expected.length;i++)difference|=provided.charCodeAt(i)^expected.charCodeAt(i);
  if(difference!==0)return c.json({error:'Unauthorized'},401);
  const results=await c.env.DB.prepare("SELECT day,country,COUNT(*) AS visits FROM visits WHERE day>=date('now','-30 days') GROUP BY day,country ORDER BY day DESC,country").all();
- return c.json({measure:'opt-in sessions only',counts:results.results});
+ const counts=(results.results as Array<Record<string,unknown>>).map(row=>{
+  const code=String(row.country||'ZZ');
+  const flag=/^[A-Z]{2}$/.test(code)&&code!=='ZZ'
+    ? String.fromCodePoint(...[...code].map(char=>127397+char.charCodeAt(0)))
+    : '—';
+  return {...row,flag};
+ });
+ return c.json({measure:'opt-in sessions only',counts});
 });
 
 app.get('/health',c=>c.json({service:'analytics',ok:true}));
