@@ -4,7 +4,6 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Check, CheckCircle2, Che
 import { chapters, evidence } from './data';
 import type { ChapterId, Evidence } from './types';
 
-const ROOT = import.meta.env.BASE_URL;
 const ENDPOINT: string = (import.meta.env.VITE_ANALYTICS_ENDPOINT || '').trim();
 type Consent = 'yes' | 'no' | null;
 const progressKey = 'forensic-room-progress-v1';
