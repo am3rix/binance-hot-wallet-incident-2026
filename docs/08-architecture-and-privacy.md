@@ -11,12 +11,12 @@ It is modeled on the task-by-task reading and practice pattern described in the 
 - **Frontend:** Vite, React, TypeScript, Radix UI Dialog and Lucide icons.
 - **Static deployment:** GitHub Pages serves the production files built by GitHub Actions, not the Vite development server.
 - **Evidence:** stable links to Ethereum public transactions and to cited reports. No sensitive transaction signing functionality exists.
-- **Optional backend:** Cloudflare Worker + Hono + D1, deployed separately, for opt-in aggregate country counts.
+- **Optional backend:** A separately hosted, private service may collect opt-in aggregate statistics. Its implementation and credentials are not included in this public repository.
 - **Research indexing:** static long-form articles remain at `/research/` and `sitemap.xml` preserves canonical URLs.
 
 ## Consent
 
-Declining analytics prevents optional event collection. A third-party infrastructure provider may still process network connection logs for service delivery or abuse prevention. Those are not controlled by this repository. No IP data or geolocation is secretly collected after refusal.
+Declining analytics prevents optional event collection. A third-party infrastructure provider may still process network connection logs for service delivery or abuse prevention. Those are not controlled by this repository. The public app does not send optional analytics on refusal. Infrastructure providers may nevertheless retain connection logs independently.
 
 ## Security and build limits
 
@@ -34,3 +34,7 @@ Declining analytics prevents optional event collection. A third-party infrastruc
 2. Inspect the `Build and publish research room` workflow result.
 3. Test the main page and the retained `/research/` URLs.
 4. Confirm that the Search Console HTML token remains reachable at its original path.
+
+## Public source and backend separation
+
+The web UI is client-side code, so its bundled JavaScript is visible to every visitor. Backend implementation, database migrations, internal routes, credentials and administrator controls should be maintained in a **separate private repository**. A frontend API endpoint may be visible in browser network requests; server-side authentication and authorization must never depend on hiding that endpoint. The optional analytics service is not enabled by default. Files previously committed to public Git history may remain recoverable from historical revisions even after removal from the current branch.

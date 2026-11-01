@@ -5,3 +5,6 @@ __pycache__/
 reports/
 .pytest_cache/
 .DS_Store
+
+# Keep any local backend copy out of the public repository
+/analytics/

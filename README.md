@@ -12,7 +12,7 @@ Independent research on the October 2026 Binance hot-wallet incident, covering a
 
 [**Open the interactive research room**](https://am3rix.github.io/binance-hot-wallet-incident-2026/) — seven chapters with linked evidence, diagrams, and knowledge checks. Read the [incident report](docs/01-incident-report.md) for a conventional narrative; use the [evidence ledger](docs/02-evidence-ledger.md) for transaction references.
 
-The interactive source is under [`web/`](web/); the site is built with Vite, React and TypeScript. Optional consent-based analytics infrastructure lives separately in [`analytics/`](analytics/).
+The interactive source is under [`web/`](web/); the site is built with Vite, React and TypeScript. Any optional analytics backend is maintained separately and is not included in this public repository or GitHub Pages deployment.
 <p align="center">
   <a href="docs/00-start-here.md">Start here</a> ·
   <a href="docs/01-incident-report.md">Incident report</a> ·
