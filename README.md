@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/cover.svg" alt="Independent forensic reconstruction — Binance October 2026" width="100%" /></p>
+<p align="center"><img src="assets/cover-cinematic.webp" alt="Independent forensic reconstruction — Binance October 2026" width="100%" /></p>
 
 > **NEW TO BLOCKCHAIN FORENSICS?** Start with the [guided learning path](docs/00-start-here.md). No wallet, exchange account or code download is required to inspect the evidence.
 
@@ -14,7 +14,7 @@
   <a href="docs/04-reproduction.md">Reproduce results</a> ·
   <a href="docs/05-sources-and-limitations.md">Sources</a> ·
   <a href="site/index.html">Interactive field report</a> ·
-  <a href="https://drkasber1-art.github.io/binance-hot-wallet-incident-2026/">Live site (after Pages is enabled)</a>
+  <a href="https://am3rix.github.io/binance-hot-wallet-incident-2026/">Live site (after Pages is enabled)</a>
 </p>
 
 ---
