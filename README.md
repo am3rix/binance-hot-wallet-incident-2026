@@ -1,5 +1,11 @@
 <p align="center"><img src="assets/cover-cinematic.webp" alt="Independent forensic reconstruction — Binance October 2026" width="100%" /></p>
 
+# Binance Hack 2026 — EIP-7702 Forensic Analysis
+
+Independent research on the October 2026 Binance hot-wallet incident, covering a sourced incident timeline, Ethereum transaction evidence, EIP-7702 authorization semantics and the limits of public attribution.
+
+**Read online:** [Research homepage](https://am3rix.github.io/binance-hot-wallet-incident-2026/) · [Incident timeline](https://am3rix.github.io/binance-hot-wallet-incident-2026/research/binance-hack-2026-timeline.html) · [EIP-7702 analysis](https://am3rix.github.io/binance-hot-wallet-incident-2026/research/eip-7702-authorization-analysis.html) · [Transaction evidence](https://am3rix.github.io/binance-hot-wallet-incident-2026/research/ethereum-transaction-evidence.html)
+
 > **NEW TO BLOCKCHAIN FORENSICS?** Start with the [guided learning path](docs/00-start-here.md). No wallet, exchange account or code download is required to inspect the evidence.
 
 
@@ -14,7 +20,7 @@
   <a href="docs/04-reproduction.md">Reproduce results</a> ·
   <a href="docs/05-sources-and-limitations.md">Sources</a> ·
   <a href="site/index.html">Interactive field report</a> ·
-  <a href="https://am3rix.github.io/binance-hot-wallet-incident-2026/">Live site (after Pages is enabled)</a>
+  <a href="https://am3rix.github.io/binance-hot-wallet-incident-2026/">Research website (enable GitHub Pages)</a>
 </p>
 
 ---
