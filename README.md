@@ -4,14 +4,15 @@
 
 Independent research on the October 2026 Binance hot-wallet incident, covering a sourced incident timeline, Ethereum transaction evidence, EIP-7702 authorization semantics and the limits of public attribution.
 
-**Read online:** [Research homepage](https://am3rix.github.io/binance-hot-wallet-incident-2026/) · [Incident timeline](https://am3rix.github.io/binance-hot-wallet-incident-2026/research/binance-hack-2026-timeline.html) · [EIP-7702 analysis](https://am3rix.github.io/binance-hot-wallet-incident-2026/research/eip-7702-authorization-analysis.html) · [Transaction evidence](https://am3rix.github.io/binance-hot-wallet-incident-2026/research/ethereum-transaction-evidence.html)
 
-> **NEW TO BLOCKCHAIN FORENSICS?** Start with the [guided learning path](docs/00-start-here.md). No wallet, exchange account or code download is required to inspect the evidence.
+> **New to blockchain forensics?** Start with the [guided learning path](docs/00-start-here.md). No wallet, exchange account or code download is required to inspect the evidence.
 
 
-<p align="center">
-  <strong>INDEPENDENT ON-CHAIN CASE STUDY</strong> · 29 OCTOBER 2026 · ETHEREUM MAINNET
-</p>
+## Read the case study
+
+[**Open the interactive research room**](https://am3rix.github.io/binance-hot-wallet-incident-2026/) — seven chapters with linked evidence, diagrams, and knowledge checks. Read the [incident report](docs/01-incident-report.md) for a conventional narrative; use the [evidence ledger](docs/02-evidence-ledger.md) for transaction references.
+
+The interactive source is under [`web/`](web/); the site is built with Vite, React and TypeScript. Optional consent-based analytics infrastructure lives separately in [`analytics/`](analytics/).
 <p align="center">
   <a href="docs/00-start-here.md">Start here</a> ·
   <a href="docs/01-incident-report.md">Incident report</a> ·
@@ -19,8 +20,7 @@ Independent research on the October 2026 Binance hot-wallet incident, covering a
   <a href="docs/03-eip7702-contract-analysis.md">Contract analysis</a> ·
   <a href="docs/04-reproduction.md">Reproduce results</a> ·
   <a href="docs/05-sources-and-limitations.md">Sources</a> ·
-  <a href="site/index.html">Interactive field report</a> ·
-  <a href="https://am3rix.github.io/binance-hot-wallet-incident-2026/">Research website (enable GitHub Pages)</a>
+  <a href="https://am3rix.github.io/binance-hot-wallet-incident-2026/">Interactive room</a>
 </p>
 
 ---
