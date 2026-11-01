@@ -1,1 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="480" viewBox="0 0 1440 480"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#070b13"/><stop offset="1" stop-color="#141d2a"/></linearGradient><radialGradient id="halo"><stop stop-color="#d4a82b" stop-opacity=".21"/><stop offset="1" stop-color="#d4a82b" stop-opacity="0"/></radialGradient><pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#304153" opacity=".25"/></pattern></defs><rect width="1440" height="480" fill="url(#bg)"/><rect width="1440" height="480" fill="url(#grid)"/><circle cx="1100" cy="218" r="340" fill="url(#halo)"/><g stroke="#c6a044" fill="none" opacity=".8"><circle cx="1130" cy="233" r="155"/><circle cx="1130" cy="233" r="123" stroke-dasharray="6 10"/><path d="M975 233H1285M1130 78V388M1020 124L1240 342M1240 124L1020 342" opacity=".4"/></g><g transform="translate(1130 233)" fill="#f0c956"><path d="M0 -66 25 -41 0 -16 -25 -41Z"/><path d="M-66 0-41 -25-16 0-41 25Z"/><path d="M66 0 41 -25 16 0 41 25Z"/><path d="M0 66 25 41 0 16 -25 41Z"/><path d="M0 -35 35 0 0 35 -35 0Z"/></g><g font-family="Arial, Helvetica, sans-serif"><text x="85" y="85" fill="#d2aa49" font-size="18" letter-spacing="5">INDEPENDENT FORENSIC REPORT  /  001</text><text x="84" y="191" fill="#f4f5f8" font-size="57" font-weight="700">BINANCE HOT-WALLET</text><text x="84" y="256" fill="#f4f5f8" font-size="57" font-weight="700">INCIDENT</text><text x="86" y="316" fill="#9eaabd" font-size="25">EIP-7702 · Authorization · On-chain evidence</text><text x="86" y="406" fill="#d2aa49" font-size="17" letter-spacing="3">29 OCT 2026   |   CASE STUDY   |   REPRODUCIBLE RESEARCH</text></g><g transform="translate(1320 45)"><rect width="78" height="46" rx="4" fill="#fff"/><rect y="15" width="78" height="31" fill="#db2530"/><rect y="30" width="78" height="16" fill="#19488e"/><circle cx="39" cy="22" r="10" fill="#fff"/><path d="M39 14l3 6h7l-5 4 2 7-7-4-7 4 2-7-5-4h7z" fill="#db2530"/></g><text x="1260" y="112" font-family="Arial" font-size="12" fill="#9eaabd">FBI ATTRIBUTION</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="480" viewBox="0 0 1440 480" role="img" aria-labelledby="title desc">
+<title id="title">Binance hot-wallet incident — independent forensic report</title>
+<desc id="desc">Dark graphite report cover with precise title typography, a metallic gold Binance-inspired emblem, transaction overlays, and a small correctly constructed North Korean flag in a labeled FBI attribution panel.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080d14"/><stop offset=".52" stop-color="#0d1520"/><stop offset="1" stop-color="#0a1019"/></linearGradient>
+  <radialGradient id="warm"><stop stop-color="#b77c24" stop-opacity=".26"/><stop offset=".7" stop-color="#8e6b31" stop-opacity=".055"/><stop offset="1" stop-color="#8e6b31" stop-opacity="0"/></radialGradient>
+  <radialGradient id="cold"><stop stop-color="#36566f" stop-opacity=".24"/><stop offset="1" stop-color="#31536d" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff3bc"/><stop offset=".23" stop-color="#efce70"/><stop offset=".55" stop-color="#b27d1e"/><stop offset=".78" stop-color="#e7bb48"/><stop offset="1" stop-color="#8c5e17"/></linearGradient>
+  <linearGradient id="goldSide" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#82500d"/><stop offset=".6" stop-color="#4f300b"/><stop offset="1" stop-color="#b07b24"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#172434" stop-opacity=".96"/><stop offset="1" stop-color="#0b111b" stop-opacity=".94"/></linearGradient>
+  <pattern id="mesh" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#4b6579" stroke-width=".65" opacity=".16"/><circle cx="0" cy="0" r=".85" fill="#738b9c" opacity=".25"/></pattern>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="15"/></filter>
+  <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="7" dy="15" stdDeviation="15" flood-color="#000" flood-opacity=".75"/></filter>
+  <clipPath id="flagclip"><rect x="0" y="0" width="75" height="38" rx="2"/></clipPath>
+</defs>
+<rect width="1440" height="480" fill="url(#bg)"/>
+<rect width="1440" height="480" fill="url(#mesh)"/>
+<circle cx="1100" cy="234" r="400" fill="url(#warm)"/><circle cx="915" cy="430" r="420" fill="url(#cold)"/>
+<rect x="0" y="0" width="1440" height="3" fill="#e4b94f" opacity=".4"/>
+<path d="M0 447H1440" stroke="#b6c5d3" opacity=".12"/>
+<g font-family="Arial, Helvetica, sans-serif">
+  <text x="84" y="83" fill="#dbb353" letter-spacing="4.2" font-size="17" font-weight="500">INDEPENDENT FORENSIC REPORT</text>
+  <path d="M85 101H182" stroke="#d5ae4d" stroke-width="2.5"/>
+  <text x="78" y="201" fill="#f5f6fa" font-size="76" font-weight="700" letter-spacing="-1.5">BINANCE</text>
+  <text x="79" y="276" fill="#f5f6fa" font-size="61" font-weight="700" letter-spacing="-1.1">HOT-WALLET INCIDENT</text>
+  <text x="84" y="335" fill="#a6b6c7" font-size="24" font-weight="400">EIP-7702 authorizations  ·  On-chain transaction analysis</text>
+  <text x="85" y="416" fill="#ccad62" font-size="16" letter-spacing="2.5">29 OCT 2026</text>
+  <path d="M231 401V421" stroke="#56677a" stroke-width="1.3"/>
+  <text x="252" y="416" fill="#9aaabc" font-size="15" letter-spacing="1.25">ETHEREUM MAINNET</text>
+</g>
+<!-- Interactive-style but static analytical overlay, on the right only -->
+<g stroke="#c7a44b" fill="none" opacity=".3">
+  <circle cx="1154" cy="213" r="156" stroke-width="1.1"/>
+  <circle cx="1154" cy="213" r="130" stroke-width="1" stroke-dasharray="3 9"/>
+  <circle cx="1154" cy="213" r="105" stroke-width=".6"/>
+  <path d="M998 213H1310M1154 57V369M1044 103L1264 323M1264 103L1044 323" stroke-width=".7"/>
+  <path d="M1001 158A162 162 0 0 1 1252 85" stroke="#e2b34d" stroke-width="2.3"/>
+  <path d="M1300 264A163 163 0 0 1 1116 372" stroke="#ad8a42" stroke-width="2"/>
+</g>
+<g fill="#dbb75f"><circle cx="995" cy="159" r="3"/><circle cx="1250" cy="86" r="3"/><circle cx="1300" cy="263" r="3"/></g>
+<!-- Soft cast shadow under the 3D mark -->
+<ellipse cx="1157" cy="300" rx="116" ry="32" fill="#bd8a22" opacity=".13" filter="url(#glow)"/>
+<g filter="url(#shadow)" transform="translate(1150 214) rotate(-8)">
+  <g transform="translate(10 13)" fill="url(#goldSide)" stroke="#3f2e15" stroke-width="2">
+    <path d="M0-100 35-65 0-30-35-65Z"/>
+    <path d="M-100 0-65-35-30 0-65 35Z"/>
+    <path d="M100 0 65-35 30 0 65 35Z"/>
+    <path d="M0 100 35 65 0 30-35 65Z"/>
+    <path d="M0-52 52 0 0 52-52 0Z"/>
+  </g>
+  <g fill="url(#gold)" stroke="#f9df97" stroke-opacity=".65" stroke-width="1.2">
+    <path d="M0-100 35-65 0-30-35-65Z"/>
+    <path d="M-100 0-65-35-30 0-65 35Z"/>
+    <path d="M100 0 65-35 30 0 65 35Z"/>
+    <path d="M0 100 35 65 0 30-35 65Z"/>
+    <path d="M0-52 52 0 0 52-52 0Z"/>
+  </g>
+  <path d="M0-99 34-65M-100 0-65-34M0-52 51 0" stroke="#fff1b8" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+</g>
+<!-- Small technical status plates with sensible safe margins -->
+<g transform="translate(923 42)">
+  <rect width="184" height="67" rx="8" fill="url(#panel)" stroke="#31465a"/>
+  <circle cx="18" cy="21" r="3" fill="#d8b159"/>
+  <text x="31" y="25" font-family="monospace" fill="#d9e0e9" font-size="12">TRANSACTION TYPE</text>
+  <text x="16" y="51" font-family="monospace" fill="#dfba63" font-size="17" font-weight="bold">0x04 / EIP-7702</text>
+</g>
+<g transform="translate(1280 143)">
+  <rect width="121" height="65" rx="8" fill="url(#panel)" stroke="#31465a"/>
+  <text x="13" y="25" font-family="monospace" fill="#a6b6c7" font-size="11">AUTHORIZATIONS</text>
+  <text x="13" y="51" font-family="monospace" fill="#dfba63" font-size="21" font-weight="bold">50</text>
+</g>
+<!-- Distinct, corrected DPRK flag and attribution label -->
+<g transform="translate(1075 391)" font-family="Arial, Helvetica, sans-serif">
+  <rect x="0" y="0" width="326" height="65" rx="8" fill="#101a27" fill-opacity=".98" stroke="#36485d" stroke-width="1"/>
+  <g transform="translate(15 14)">
+    <g clip-path="url(#flagclip)">
+      <rect width="75" height="38" fill="#024fa2"/>
+      <rect y="6" width="75" height="26" fill="#fff"/>
+      <rect y="9" width="75" height="20" fill="#ed1c27"/>
+      <circle cx="24" cy="19" r="9" fill="#fff"/>
+      <polygon points="24.00,10.00 26.29,15.84 32.56,16.22 27.71,20.21 29.29,26.28 24.00,22.90 18.71,26.28 20.29,20.21 15.44,16.22 21.71,15.84" fill="#ed1c27"/>
+    </g>
+    <rect x="0" y="0" width="75" height="38" rx="2" fill="none" stroke="#d8e0e9" stroke-opacity=".4"/>
+  </g>
+  <text x="102" y="26" fill="#d6b259" font-size="12" font-weight="700" letter-spacing="1.2">FBI ATTRIBUTION</text>
+  <text x="102" y="45" fill="#c3cfda" font-size="12" letter-spacing=".15">DPRK-linked TraderTraitor</text>
+</g>
+<path d="M820 32V448" stroke="#56677a" stroke-width=".8" opacity=".17"/>
+</svg>
