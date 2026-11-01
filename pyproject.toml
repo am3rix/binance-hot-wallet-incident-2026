@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hotwallet-forensics"
+version = "0.1.0"
+description = "Read-only Ethereum transaction verification for a published incident case study"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+hotwallet-forensics = "hotwallet_forensics.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

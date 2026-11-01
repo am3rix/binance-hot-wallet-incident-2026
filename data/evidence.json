@@ -1,0 +1,12 @@
+{
+  "snapshot_utc": "2026-10-31",
+  "network": "ethereum",
+  "chain_id": 1,
+  "authorization_transaction": "0xad99264d5532ae0dd04b2004eebda05f25657e70dacb764f7ac8d4ccd051298b",
+  "sweep_transaction": "0x53bd38b816c23e74134786c29a8c18d792777998a3b9326047b583100e88e2f3",
+  "wallet": "0x28c6c06298d514db089934071355e5743bf21d60",
+  "delegate": "0x63e842b054bd624a465454d533c33f573e9c6fae",
+  "expected_authorization_block": 26300753,
+  "expected_sweep_block": 26300770,
+  "notes": "External research labels are attributed; a blockchain transaction does not establish the initial access vector."
+}

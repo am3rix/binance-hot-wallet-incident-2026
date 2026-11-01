@@ -1,0 +1,32 @@
+[
+  {
+    "id": "S01",
+    "title": "Binance operator incident update",
+    "url": "https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7",
+    "kind": "operator"
+  },
+  {
+    "id": "S02",
+    "title": "TRM Labs investigation",
+    "url": "https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history",
+    "kind": "independent analysis"
+  },
+  {
+    "id": "S03",
+    "title": "FBI attribution",
+    "url": "https://www.fbi.gov/investigate/cyber/alerts/2026/north-korea-responsible-for-6-billion-binance-attack",
+    "kind": "law enforcement"
+  },
+  {
+    "id": "S04",
+    "title": "Ethereum EIP-7702",
+    "url": "https://eips.ethereum.org/EIPS/eip-7702",
+    "kind": "protocol"
+  },
+  {
+    "id": "S05",
+    "title": "Bitquery investigation",
+    "url": "https://bitquery.io/investigations/binance-hack",
+    "kind": "independent analysis"
+  }
+]
