@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://am3rix.github.io/binance-hot-wallet-incident-2026/sitemap.xml
